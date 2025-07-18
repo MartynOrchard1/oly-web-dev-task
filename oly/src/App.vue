@@ -70,4 +70,15 @@ button:hover {
   object-fit: cover;
   box-shadow: 0 4px 15px rgba( 0, 0, 0, 0.2);
 }
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
 </style>
