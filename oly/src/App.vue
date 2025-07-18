@@ -29,3 +29,32 @@ onMounted(() => {
 })
 </script>
 
+<style scoped>
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+.dog-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+</style>
