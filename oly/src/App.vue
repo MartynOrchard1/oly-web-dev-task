@@ -59,12 +59,15 @@ button {
 }
 
 button:hover {
-  background-color: #1565c0;
+  background-color: #135ba1;
 }
 
 .dog-img {
   width: 100%;
+  height: auto;
   border-radius: 12px;
   margin-top: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba( 0, 0, 0, 0.2);
 }
 </style>
