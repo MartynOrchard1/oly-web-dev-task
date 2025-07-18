@@ -48,13 +48,14 @@ h1 {
 
 button {
   margin-top: 20px;
-  padding: 10px 16px;
+  padding: 12px 20px;
   font-size: 16px;
   background-color: #1976d2;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
