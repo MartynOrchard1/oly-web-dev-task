@@ -16,7 +16,7 @@ const dogImage = ref('')
 
 const fetchDogImage = async () => {
   try {
-    const response = await fetch('https://dog.ceo/api/breeds/image/random')
+    const response = await fetch('https://dog.ceo/api/breeds/image/random/3')
     const data = await response.json()
     dogImage.value = data.message
   } catch (error) {
