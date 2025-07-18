@@ -32,9 +32,18 @@ onMounted(() => {
 <style scoped>
 .container {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 40px auto;
+  padding: 20px;
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba( 0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
 }
 
 button {
