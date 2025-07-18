@@ -1,30 +1,84 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="container">
+    <h1>Random Dog Image 🐶</h1>
+
+    <img v-if="dogImage" :src="dogImage" alt="Random Dog" class="dog-img" />
+    <p v-else>Loading...</p>
+
+    <button @click="fetchDogImage">Get New Dog</button>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const dogImage = ref('')
+
+const fetchDogImage = async () => {
+  try {
+    const response = await fetch('https://dog.ceo/api/breeds/image/random')
+    const data = await response.json()
+    dogImage.value = data.message
+  } catch (error) {
+    console.error('Error fetching dog image:', error)
+  }
+}
+
+onMounted(() => {
+  fetchDogImage()
+})
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba( 0, 0, 0, 0.1);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #135ba1;
+}
+
+.dog-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba( 0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
 }
 </style>
