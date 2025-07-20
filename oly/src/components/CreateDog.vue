@@ -12,7 +12,7 @@
     </div>
 
     <label for="file">Upload Image</label>
-    <input type="file" id="file" @change="handleFile" accept="image/*" />
+    <input type="file" id="file" @change="handleFile" accept="image/png, image/jpeg, image/jpg, image/webp" />
 
     <button type="submit">Add Dog</button>
     </form>
