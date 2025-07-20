@@ -68,3 +68,15 @@ npm run dev
     - `https://dog.ceo/api/breeds/image/random`
 - Website/docs:
     - [Link To Dog API](https://dog.ceo/dog-api/)
+
+## Form + Uploading Rules
+- You can manually create a dog entry by:
+    - Typing a custom name
+    - Providing a direct image URL or
+    - Uploading a valid image file from your computer
+- Accepted File Types: `.png, .jpg, .jpeg, .webp`
+- Invalid file types are blocked with alerts + file reset
+
+## Author 
+Created by Martyn James Orchard
+3rd Year Student in BICT At UCOL Double Majoring in Software Engineering & Web Development
