@@ -8,6 +8,7 @@
     <button @click="fetchDogImage">Get New Dog</button>
     <button @click="saveDogImage" :disabled="!dogImage">Save Dog Image</button>
 
+    <CreateDog @add="addDog" />
     <SavedDogs :dogs="savedDogs" @delete="deleteDog" />
   </div>
 </template>
@@ -15,6 +16,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import SavedDogs from './components/SavedDogs.vue'
+import CreateDog from './components/CreateDog.vue'
 
 const dogImage = ref('')
 const savedDogs = ref([])
@@ -40,6 +42,10 @@ const deleteDog = (index) => {
     if (confirm('Are you sure you want to delete this dog?')) {
         savedDogs.value.splice(index, 1)
     }
+}
+
+const addDog = (dog) => {
+  savedDogs.value.push(dog)
 }
 
 onMounted(() => {
