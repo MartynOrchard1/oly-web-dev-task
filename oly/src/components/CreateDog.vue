@@ -28,3 +28,7 @@ const handleSubmit = () => {
     url.value = ''
 }
 </script>
+
+<style scoped>
+
+</style>
