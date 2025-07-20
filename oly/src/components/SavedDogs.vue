@@ -27,7 +27,7 @@
 <script setup>
 import { reactive, ref } from 'vue';
 
-    defineProps({
+    const props = defineProps({
         dogs: {
             type: Array,
             required: true
@@ -38,7 +38,16 @@ import { reactive, ref } from 'vue';
     const edit = ref([]);
 
     const toggle = (index) => {
-        
+        if (editIndexmap[index]) {
+            // Save
+            props.dogs[index].name = edit.value[index] || props.dogs[index].name;
+            editIndexmap[index] = false;
+        }
+        else {
+            // Edit
+            editIndexmap[index] = true;
+            edit.value[index] = props.dogs[index].name; // Edit value
+        } 
     };
 </script>
 
