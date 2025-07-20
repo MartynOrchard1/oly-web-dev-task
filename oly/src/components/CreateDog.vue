@@ -37,12 +37,14 @@ const handleSubmit = () => {
   background: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  color: black;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  color: black;
 }
 
 input {
