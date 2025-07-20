@@ -30,6 +30,17 @@ const handleSubmit = () => {
     name.value = ''
     url.value = ''
 }
+
+const loadRandomImage = async () => {
+  try {
+    const res = await fetch('https://dog.ceo/api/breeds/image/random')
+    const data = await res.json()
+    url.value = data.message
+  } catch (err) {
+    console.error('Error fetching image:', err)
+  }
+}
+
 </script>
 
 <style scoped>
@@ -68,4 +79,15 @@ button {
 button:hover {
   background-color: #2e7d32;
 }
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-group input {
+  flex: 1;
+}
+
 </style>
