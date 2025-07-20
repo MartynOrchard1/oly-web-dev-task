@@ -16,7 +16,9 @@
                 class="edit-input"
                 placeholder="Edit name" >
 
-
+                <button @click="toggle(index)">
+                    {{ editIndexmap[index] ? 'Save' : 'Edit' }}
+                </button>
             </li>
         </ul>
     </div>
