@@ -22,6 +22,7 @@
 import { ref, onMounted } from 'vue'
 
 const dogImage = ref('')
+const savedDogs = ref([])
 
 const fetchDogImage = async () => {
   try {
@@ -30,6 +31,13 @@ const fetchDogImage = async () => {
     dogImage.value = data.message
   } catch (error) {
     console.error('Error fetching dog image:', error)
+  }
+}
+
+const saveDogImage = () => {
+  const name = prompt('Give this dog a name')
+  if (name) {
+    savedDogs.value.push({ url: dogImage.value, name })
   }
 }
 
