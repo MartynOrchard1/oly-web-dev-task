@@ -8,7 +8,7 @@
     <button @click="fetchDogImage">Get New Dog</button>
     <button @click="saveDogImage" :disabled="!dogImage">Save Dog Image</button>
 
-    <SavedDogs :dogs="savedDogs" />
+    <SavedDogs :dogs="savedDogs" @delete="deleteDog" />
   </div>
 </template>
 
