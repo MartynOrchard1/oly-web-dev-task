@@ -20,6 +20,11 @@ const emit = defineEmits(['add'])
 const name = ref('')
 const url = ref('')
 
+const handleSubmit = () => {
+    emit('add', { name: name.value, url: url.value })
 
-
+    // Reset the form
+    name.value = ''
+    url.value = ''
+}
 </script>
