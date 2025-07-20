@@ -1,5 +1,5 @@
 <template>
-    <div class="saved-seciton">
+    <div class="saved-section">
         <h2>Saved Dogs</h2>
 
         <div v-if="dogs.length === 0">
