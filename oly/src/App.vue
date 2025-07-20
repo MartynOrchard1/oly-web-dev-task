@@ -6,6 +6,7 @@
     <p v-else>Loading...</p>
 
     <button @click="fetchDogImage">Get New Dog</button>
+    <button @click="saveDogImage" :disabled="!dogImage">Save Dog Image</button>
   </div>
 </template>
 
