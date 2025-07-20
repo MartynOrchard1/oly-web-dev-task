@@ -11,7 +11,8 @@
     <h2>Saved Dogs:</h2>
     <ul class="saved-list">
       <li v-for="(dog, index) in savedDogs" :key="index">
-        
+        <img :src="dog.url" alt="Dog image" class="thumb">
+        <span>{{ dog.name }}</span>
       </li>
     </ul>
   </div>
