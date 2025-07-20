@@ -80,5 +80,8 @@ button {
     padding: 6px 10px;
     border: none;
     background-color: #1976d2;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
 }
 </style>
