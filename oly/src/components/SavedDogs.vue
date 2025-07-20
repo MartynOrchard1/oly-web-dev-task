@@ -84,4 +84,10 @@ button {
     border-radius: 8px;
     cursor: pointer;
 }
+
+.edit-input {
+    padding: 6px;
+    margin-left: 10px;
+    font-size: 14px;
+}
 </style>
