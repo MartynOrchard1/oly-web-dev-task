@@ -44,6 +44,12 @@ const loadRandomImage = async () => {
   }
 }
 
+const handleFile = (e) => {
+  const file = e.target.files[0]
+  if (file) {
+    url.value = URL.createObjectURL(file) 
+  }
+}
 </script>
 
 <style scoped>
