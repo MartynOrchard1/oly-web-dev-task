@@ -51,5 +51,16 @@ input {
   border: 1px solid #ccc;
 }
 
+button {
+  padding: 10px;
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
+button:hover {
+  background-color: #2e7d32;
+}
 </style>
