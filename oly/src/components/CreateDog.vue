@@ -45,5 +45,11 @@ form {
   gap: 12px;
 }
 
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
 
 </style>
