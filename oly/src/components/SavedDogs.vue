@@ -9,7 +9,14 @@
         <ul class="saved-list" v-else>
             <li v-for="(dog, index) in dogs" :key="index">
                 <img :src="dog.url" alt="Dog" class="thumb">
-                <span>{{ dog.name }}</span>
+                <span v-if="!editIndexmap[index]">{{ dog.name }}</span>
+                <input 
+                v-else
+                v-model="edit[index]"
+                class="edit-input"
+                placeholder="Edit name" >
+
+
             </li>
         </ul>
     </div>
