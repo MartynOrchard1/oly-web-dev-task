@@ -74,4 +74,11 @@ import { reactive, ref } from 'vue';
     margin-right: 10px;
     object-fit: cover;
 }
+
+button {
+    margin-left: 10px;
+    padding: 6px 10px;
+    border: none;
+    background-color: #1976d2;
+}
 </style>
