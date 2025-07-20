@@ -36,6 +36,10 @@ import { reactive, ref } from 'vue';
 
     const editIndexmap = reactive({});
     const edit = ref([]);
+
+    const toggle = (index) => {
+        
+    };
 </script>
 
 <style scoped>
