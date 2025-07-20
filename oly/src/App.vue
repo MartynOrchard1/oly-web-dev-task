@@ -8,7 +8,7 @@
     <button @click="fetchDogImage">Get New Dog</button>
     <button @click="saveDogImage" :disabled="!dogImage">Save Dog Image</button>
 
-    <SavedDogs :dogs="savedDogs" />
+    <SavedDogs :dogs="savedDogs" @delete="deleteDog" />
   </div>
 </template>
 
@@ -34,6 +34,12 @@ const saveDogImage = () => {
   if (name) {
     savedDogs.value.push({ url: dogImage.value, name })
   }
+}
+
+const deleteDog = (index) => {
+    if (confirm('Are you sure you want to delete this dog?')) {
+        savedDogs.value.splice(index, 1)
+    }
 }
 
 onMounted(() => {
