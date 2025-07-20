@@ -7,7 +7,7 @@ Full client side CRUD web app built with vue 3. The app allows users to fetch, s
 - Save random dogs from the Dog API 
 - Manually add a new dog using the form provided
 - Upload custom dog images
-    - Restrictited file types to common image types: jpg, jpeg, png, webp
+    - Restricted file types to common image types: jpg, jpeg, png, webp
     - Javascript validation added as well to ensure this
 
 **Read**
