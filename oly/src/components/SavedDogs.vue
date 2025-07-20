@@ -10,11 +10,7 @@
             <li v-for="(dog, index) in dogs" :key="index">
                 <img :src="dog.url" alt="Dog" class="thumb">
                 <span v-if="!editIndexmap[index]">{{ dog.name }}</span>
-                <input 
-                v-else
-                v-model="edit[index]"
-                class="edit-input"
-                placeholder="Edit name" >
+                <input v-else v-model="edit[index]" class="edit-input" placeholder="Edit name">
                 <div class="btn-group">
                     <!-- Edit button -->
                     <button class="edit-btn" @click="toggle(index)">
@@ -35,28 +31,35 @@
 const emit = defineEmits(['delete']);
 import { reactive, ref } from 'vue';
 
-    const props = defineProps({
-        dogs: {
-            type: Array,
-            required: true
-        },
-    })
+const props = defineProps({
+    dogs: {
+        type: Array,
+        required: true
+    },
+})
 
-    const editIndexmap = reactive({});
-    const edit = ref([]);
+const editIndexmap = reactive({});
+const edit = ref([]);
 
-    const toggle = (index) => {
-        if (editIndexmap[index]) {
-            // Save
-            props.dogs[index].name = edit.value[index] || props.dogs[index].name;
-            editIndexmap[index] = false;
-        }
-        else {
-            // Edit
-            editIndexmap[index] = true;
-            edit.value[index] = props.dogs[index].name; // Edit value
-        } 
-    };
+const toggle = (index) => {
+    if (editIndexmap[index]) {
+        // Save
+        props.dogs[index].name = edit.value[index] || props.dogs[index].name;
+        editIndexmap[index] = false;
+    }
+    else {
+        // Edit
+        editIndexmap[index] = true;
+        edit.value[index] = props.dogs[index].name; // Edit value
+    }
+};
+
+const deleteDog = (index) => {
+    if (confirm('Are you sure you want to delete this dog?')) {
+        savedDogs.value.splice(index, 1)
+    }
+}
+
 </script>
 
 <style scoped>
@@ -100,16 +103,16 @@ button {
 }
 
 .btn-group {
-  display: flex;
-  gap: 8px;
+    display: flex;
+    gap: 8px;
 }
 
 .delete-btn {
-  padding: 6px 12px;
-  background-color: #d32f2f;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+    padding: 6px 12px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 </style>
