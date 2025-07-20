@@ -31,3 +31,8 @@ Full client side CRUD web app built with vue 3. The app allows users to fetch, s
 **Dog Array Displayed with edit/delete Functionality**
 ![Dog List](Images/image-2.png)
 
+**Edit Functionality in Play (Edit Start)**
+![Edit](Images/image-3.png)
+
+**Edit Complete (Edit End)**
+![Updated Edit](Images/image-4.png)
