@@ -25,28 +25,26 @@
 </script>
 
 <style scoped>
-
 .saved-section {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .saved-list {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .saved-list li {
-  display: flex;
-  align-items: center;
-  margin: 12px 0;
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
 }
 
 .thumb {
-  width: 60px;
-  height: 60px;
-  border-radius: 8px;
-  margin-right: 10px;
-  object-fit: cover;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 10px;
+    object-fit: cover;
 }
-
 </style>
