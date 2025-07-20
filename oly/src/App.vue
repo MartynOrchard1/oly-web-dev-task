@@ -50,18 +50,18 @@ onMounted(() => {
 .container {
   max-width: 700px;
   margin: auto;
-  padding: 40px;
+  padding: 30px;
   text-align: center;
 }
 
 button {
-  margin: 20px;
+  margin: 10px;
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
   background-color: #1976d2;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
 }
 
