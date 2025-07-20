@@ -36,6 +36,13 @@ const saveDogImage = () => {
   }
 }
 
+const deleteDog = (index) => {
+    if (confirm('Are you sure you want to delete this dog?')) {
+        savedDogs.value.splice(index, 1)
+    }
+}
+
+
 onMounted(() => {
   fetchDogImage()
 })
