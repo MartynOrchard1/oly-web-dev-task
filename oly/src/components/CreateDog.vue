@@ -46,10 +46,20 @@ const loadRandomImage = async () => {
 
 const handleFile = (e) => {
   const file = e.target.files[0]
+  const input = e.target 
+
   if (file) {
-    url.value = URL.createObjectURL(file) 
+    const validTypes = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp']
+    if (!validTypes.includes(file.type)) {
+      alert('Please upload a valid image file (PNG, JPG, JPEG, WEBP).')
+      input.value = '' // Clear the input to block the file
+      return
+    }
+
+    url.value = URL.createObjectURL(file)
   }
 }
+
 </script>
 
 <style scoped>
