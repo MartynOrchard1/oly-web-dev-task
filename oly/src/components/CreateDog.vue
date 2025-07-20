@@ -89,5 +89,4 @@ button:hover {
 .input-group input {
   flex: 1;
 }
-
 </style>
