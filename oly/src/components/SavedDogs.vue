@@ -25,12 +25,17 @@
 </template>
 
 <script setup>
+import { reactive, ref } from 'vue';
+
     defineProps({
         dogs: {
             type: Array,
             required: true
         },
     })
+
+    const editIndexmap = reactive({});
+    const edit = ref([]);
 </script>
 
 <style scoped>
