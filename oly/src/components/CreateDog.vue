@@ -11,6 +11,9 @@
         <button type="button" @click="loadRandomImage">Random Image</button>
     </div>
 
+    <label for="file">Upload Image</label>
+    <input type="file" id="file" @change="handleFile" accept="image/*" />
+
     <button type="submit">Add Dog</button>
     </form>
   </div>
