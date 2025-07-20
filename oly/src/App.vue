@@ -7,6 +7,13 @@
 
     <button @click="fetchDogImage">Get New Dog</button>
     <button @click="saveDogImage" :disabled="!dogImage">Save Dog Image</button>
+
+    <h2>Saved Dogs:</h2>
+    <ul class="saved-list">
+      <li v-for="(dog, index) in savedDogs" :key="index">
+        
+      </li>
+    </ul>
   </div>
 </template>
 
