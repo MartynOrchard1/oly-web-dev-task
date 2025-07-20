@@ -80,3 +80,4 @@ npm run dev
 ## Author 
 Created by Martyn James Orchard
 3rd Year Student in BICT At UCOL Double Majoring in Software Engineering & Web Development
+This task was provided by the Olympus Entertainment Development Team
