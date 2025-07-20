@@ -14,7 +14,8 @@
     <label for="file">Upload Image</label>
     <input type="file" id="file" @change="handleFile" accept="image/png, image/jpeg, image/jpg, image/webp" />
 
-    <button type="submit">Add Dog</button>
+    <img v-if="url" :src="url" class="preview" alt="Preview" /> <!-- Preview -->
+    <button type="submit">Add Dog</button> 
     </form>
   </div>
 </template>
@@ -108,4 +109,14 @@ button:hover {
 .input-group input {
   flex: 1;
 }
+
+.preview {
+  margin-top: 12px;
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 </style>
