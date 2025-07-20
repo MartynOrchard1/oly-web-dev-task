@@ -14,3 +14,16 @@
         </ul>
     </div>
 </template>
+
+<script setup>
+    defineProps({
+        dogs: {
+            type: Array,
+            required: true
+        },
+    })
+</script>
+
+<style scoped>
+
+</style>
