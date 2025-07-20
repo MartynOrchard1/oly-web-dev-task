@@ -15,10 +15,17 @@
                 v-model="edit[index]"
                 class="edit-input"
                 placeholder="Edit name" >
+                <div class="btn-group">
+                    <!-- Edit button -->
+                    <button class="edit-btn" @click="toggle(index)">
+                        {{ editIndexmap[index] ? 'Save' : 'Edit' }}
+                    </button>
 
-                <button @click="toggle(index)">
-                    {{ editIndexmap[index] ? 'Save' : 'Edit' }}
-                </button>
+                    <!-- Delete Button -->
+                    <button class="delete-btn" @click="$emit('delete', index)">
+                        Delete
+                    </button>
+                </div>
             </li>
         </ul>
     </div>
