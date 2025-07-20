@@ -85,7 +85,7 @@ import { reactive, ref } from 'vue';
 
 button {
     margin-left: 10px;
-    padding: 6px 12px;
+    padding: 8px 12px;
     border: none;
     background-color: #1976d2;
     color: white;
