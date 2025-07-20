@@ -12,3 +12,14 @@
     </form>
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const emit = defineEmits(['add'])
+const name = ref('')
+const url = ref('')
+
+
+
+</script>
