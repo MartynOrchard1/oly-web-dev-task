@@ -32,6 +32,7 @@
 </template>
 
 <script setup>
+const emit = defineEmits(['delete']);
 import { reactive, ref } from 'vue';
 
     const props = defineProps({
@@ -84,7 +85,7 @@ import { reactive, ref } from 'vue';
 
 button {
     margin-left: 10px;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border: none;
     background-color: #1976d2;
     color: white;
@@ -96,5 +97,19 @@ button {
     padding: 6px;
     margin-left: 10px;
     font-size: 14px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 </style>
