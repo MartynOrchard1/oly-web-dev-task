@@ -48,54 +48,51 @@ onMounted(() => {
 
 <style scoped>
 .container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba( 0, 0, 0, 0.1);
-}
-
-h1 {
-  color: #333;
-  margin-bottom: 20px;
 }
 
 button {
-  margin-top: 20px;
-  padding: 12px 20px;
-  font-size: 16px;
-  background-color: #1976d2;
-  color: white;
+  margin: 10px;
+  padding: 10px 20px;
   border: none;
   border-radius: 6px;
+  background-color: #1976d2;
+  color: white;
+  font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #135ba1;
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .dog-img {
   width: 100%;
-  height: auto;
   border-radius: 12px;
-  margin-top: 20px;
-  object-fit: cover;
-  box-shadow: 0 4px 15px rgba( 0, 0, 0, 0.2);
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 22px;
-  }
+.saved-list {
+  list-style: none;
+  padding: 0;
+}
 
-  button {
-    font-size: 14px;
-    padding: 10px 16px;
-  }
+.saved-list li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  margin-right: 10px;
+  object-fit: cover;
 }
 </style>
