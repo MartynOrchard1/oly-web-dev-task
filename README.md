@@ -44,3 +44,27 @@ Full client side CRUD web app built with vue 3. The app allows users to fetch, s
 - [Vite](https://vitejs.dev/) for fast bundling
 - CSS, Vue, HTML, JavaScript
 - GitHub Desktop for branches, commits etc.
+
+## How to Use the app
+
+### Option 1: Git Clone
+```
+git clone https://github.com/MartynOrchard1/oly-web-dev-task.git
+cd oly
+npm install
+npm run dev
+```
+
+### Option 2: Download Zip
+- Download zip from [github](https://github.com/MartynOrchard1/oly-web-dev-task)
+- Open in Visual Studio Code
+- In Terminal: 
+    - `cd oly`
+    - `npm install`
+    - `npm run dev`
+
+## API Reference
+- API Link for random dogs:
+    - `https://dog.ceo/api/breeds/image/random`
+- Website/docs:
+    - [Link To Dog API](https://dog.ceo/dog-api/)
