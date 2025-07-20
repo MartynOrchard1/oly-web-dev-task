@@ -42,7 +42,6 @@ const deleteDog = (index) => {
     }
 }
 
-
 onMounted(() => {
   fetchDogImage()
 })
