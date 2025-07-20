@@ -20,6 +20,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import SavedDogs from './components/SavedDogs.vue'
 
 const dogImage = ref('')
 const savedDogs = ref([])
