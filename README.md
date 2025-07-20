@@ -23,11 +23,11 @@ Full client side CRUD web app built with vue 3. The app allows users to fetch, s
 ## Demo Images
 
 **Basic fetch and Save**
-![Landing Page](image.png)
+![Landing Page](Images/image.png)
 
 **Manual Dog Creation with Previewer**
-![Manual Form](image-1.png)
+![Manual Form](Images/image-1.png)
 
 **Dog Array Displayed with edit/delete Functionality**
-![Dog List](image-2.png)
+![Dog List](Images/image-2.png)
 
