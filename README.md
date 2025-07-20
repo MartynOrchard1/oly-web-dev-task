@@ -36,3 +36,11 @@ Full client side CRUD web app built with vue 3. The app allows users to fetch, s
 
 **Edit Complete (Edit End)**
 ![Updated Edit](Images/image-4.png)
+
+---
+
+## Tech Stack
+- [Vue 3](https://vuejs.org/) with Composition API and SFCs
+- [Vite](https://vitejs.dev/) for fast bundling
+- CSS, Vue, HTML, JavaScript
+- GitHub Desktop for branches, commits etc.
