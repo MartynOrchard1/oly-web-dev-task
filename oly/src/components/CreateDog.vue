@@ -2,13 +2,16 @@
   <div class="form-container">
     <h2>Create Your Own Dog</h2>
     <form @submit.prevent="handleSubmit">
-      <label for="name">Dog Name</label>
-      <input type="text" id="name" v-model="name" required />
+    <label for="name">Dog Name</label>
+    <input type="text" id="name" v-model="name" required />
 
-      <label for="url">Image URL</label>
-      <input type="url" id="url" v-model="url" required />
+    <label for="url">Image URL</label>
+    <div class="input-group">
+        <input type="url" id="url" v-model="url" required />
+        <button type="button" @click="loadRandomImage">Random Image</button>
+    </div>
 
-      <button type="submit">Add Dog</button>
+    <button type="submit">Add Dog</button>
     </form>
   </div>
 </template>
