@@ -9,19 +9,46 @@
         <ul class="saved-list" v-else>
             <li v-for="(dog, index) in dogs" :key="index">
                 <img :src="dog.url" alt="Dog" class="thumb">
-                <span>{{ dog.name }}</span>
+                <span v-if="!editIndexmap[index]">{{ dog.name }}</span>
+                <input 
+                v-else
+                v-model="edit[index]"
+                class="edit-input"
+                placeholder="Edit name" >
+
+                <button @click="toggle(index)">
+                    {{ editIndexmap[index] ? 'Save' : 'Edit' }}
+                </button>
             </li>
         </ul>
     </div>
 </template>
 
 <script setup>
-    defineProps({
+import { reactive, ref } from 'vue';
+
+    const props = defineProps({
         dogs: {
             type: Array,
             required: true
         },
     })
+
+    const editIndexmap = reactive({});
+    const edit = ref([]);
+
+    const toggle = (index) => {
+        if (editIndexmap[index]) {
+            // Save
+            props.dogs[index].name = edit.value[index] || props.dogs[index].name;
+            editIndexmap[index] = false;
+        }
+        else {
+            // Edit
+            editIndexmap[index] = true;
+            edit.value[index] = props.dogs[index].name; // Edit value
+        } 
+    };
 </script>
 
 <style scoped>
@@ -46,5 +73,21 @@
     border-radius: 8px;
     margin-right: 10px;
     object-fit: cover;
+}
+
+button {
+    margin-left: 10px;
+    padding: 6px 10px;
+    border: none;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit-input {
+    padding: 6px;
+    margin-left: 10px;
+    font-size: 14px;
 }
 </style>
