@@ -18,3 +18,6 @@ Full client side CRUD web app built with vue 3. The app allows users to fetch, s
 
 **Delete**
 - Remove a dog from the saved list with confirmation
+
+---
+
